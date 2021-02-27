@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>GuestBook</title>
+    <link rel="icon" href="https://img.icons8.com/ios-filled/100/000000/search-contacts.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/gueststyle.css">
+
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg site-header navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav">
+                <a class="nav-link " href="http://rshrestha9.greenriverdev.com/resume.html">Resume</a>
+
+                <a class="nav-link" href="#">Github</a>
+
+                <a class="nav-link " href="http://rshrestha9.greenriverdev.com/admin.php">Login</a>
+
+                <a class="nav-link " href="http://rshrestha9.greenriverdev.com/guestbook.html">Contact</a>
+
+                </div>
+
+            </div>
+        <form class="form-inline my-2 my-lg-0 text-right searchh"  method="get">
+            <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search" id="barsearch">
+            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+</header>
+<main>
+    <br> <br>
+    <form class="container lead" name="form" action="thankyou.php" method="get" id="form">
+
+        <div class="row">
+
+            <fieldset class="form-group p-2 rounded-right 5lg container" id="personalInfo">
+
+                <legend class="text-center">Contact Form</legend>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label for="fname">First Name: <span id="fnameError"></span></label>
+                                <input type="text" class="form-control" id="fname" name="fname" maxlength="30"
+                                       placeholder="John">
+
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="jobT">Job Title</label>
+                                <input type="text" class="form-control" id="jobT" name="jobT" maxlength="30"
+                                       placeholder="Data Analyst">
+                                <span id="jobError"></span>
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="linkd">Linkedn URL: <span id="urlError"></span></label>
+                                <input type="URL" class="form-control" id="linkd" name="url" maxlength="30"
+                                       placeholder="https://www.linkedin.com/.....">
+
+                            </div>
+
+                        </div>
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label for="lname">Last Name: <span id="lnameError"></span></label>
+                                <input type="text" class="form-control" id="lname" name="lname" maxlength="30"
+                                       placeholder="Doe">
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" class="form-control" id="company" name="company" maxlength="30"
+                                       placeholder="Abc Company LLC">
+                                <span id="compError"></span>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="personEmail">Email: <span id="personEmailError"></span></label>
+                                <input type="text" class="form-control" id="personEmail" name="personEmail"
+                                       maxlength="60"
+                                       placeholder="joeshmoe@yahoo.com">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </fieldset>
+
+
+        </div>
+        <section id="question" class="container">
+            <fieldset class="form-group p-2 rounded-right 5lg">
+                <h5>
+                    How did we met?
+                </h5>
+                <select id="opt" class="form-control" name="response">
+                    <option value="default" selected>Please select from this field</option>
+                    <option value="meetup">Meetup</option>
+                    <option value="fair">Job Fair</option>
+                    <option value="notyet">We haven't met yet</option>
+                    <option value="other">Other</option>
+                </select>
+                <span id="other"><label for="field">Other (please specify)</label><input type="text"
+                                                                                         class="form-control" id="field"
+                                                                                         name="Other"></span>
+
+
+                <label for="textArea">Message :   <span id="textError"></span></label>
+                <textarea id="textArea" class="form-control" rows="5" name="message"
+                          maxlength="500"
+                          placeholder="Your Message"></textarea>
+
+            </fieldset>
+
+
+            <div class="text-center">
+                <input type="checkbox" id="subscribeNews" name="subscribe" checked="checked" onchange="displayRadio()">
+                <label for="subscribeNews">
+                    Please add me to your mailing list!</label><br>
+                <span id="radioButtons" class="text-center">
+                    <input type="radio" class="text-center" id="html" name="q" value="html"> HTML
+                    <input type="radio" class="text-center" id="text" name="q" value="text"> Text
+                </span>
+                <br><br>
+            </div>
+
+<!--            <span id="mailingList" class="lead text-center">-->
+<!--                Mailing List<br>-->
+<!--                 Please subscribe for the latest news directly<br>-->
+<!--                    in your inbox.<br>-->
+<!--                    <input type="email" class="text-center" id="subEmail" name="subEmail"> <br>-->
+<!--                    <button type="submit" class="text-center" id="subscribe"-->
+<!--                            onclick="saveEmail()">Subscribe</button><br>-->
+<!--                <span id="emailConfirm"></span>-->
+<!--            </span>-->
+        </section>
+        <button type="submit" id="sub" class="btn btn-secondary text-center">Submit</button>
+    </form>
+
+
+</main>
+<footer class="jumbotron lead text-black-50 text-center">
+    <h2 class="display-7">Contacts</h2>
+    <div id="contacts">
+        rshrestha9@mail.greenriver.edu <br>
+        (253)263-9669
+    </div>
+    <div id="links">
+        https://www.linkedin.com/in/raju-shrestha-185b931a1/ <br>
+        https://github.com/rashrest010
+    </div>
+</footer>
+<script src="scripts/scriptguestbook.js"></script>
+</body>
+</html>

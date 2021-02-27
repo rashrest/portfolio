@@ -1,0 +1,40 @@
+
+a{
+    color: black;
+    font-size: 18px!important;
+
+    border: none!important;
+    text-align: right !important;
+
+}
+
+
+body{
+    background-color: #343a40 !important;
+}
+main {
+    margin-left: 3rem;
+    margin-top: 3rem!important;
+    background: white;
+    border-radius: 10rem!important;
+    margin-right: 3rem;
+
+}
+input,select,textarea{
+    border: 2px solid purple!important;
+}
+header{
+   background-color: #adb5bd;
+    color: #1b1e21!important;
+}
+ /*Media screen or mobile*/
+@media only screen and (max-width: 480px) {
+    #barsearch{
+        width: 50% !important;
+    }
+
+
+
+
+
+}

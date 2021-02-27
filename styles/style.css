@@ -1,0 +1,78 @@
+.aa{
+    width: 30rem!important;
+}
+.pic{
+    width: 35%;
+    height: 35%;
+    border-radius: 5rem;
+
+}
+.exp{  font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;}
+
+footer{
+    background-color: #343a40 !important;
+}
+a{
+    color: black;
+    font-size: 25px;
+    width: 15rem;
+}
+
+
+body{
+    background-color: #343a40 !important;
+}
+main {
+    margin-left: 5rem;
+    margin-top: 5rem;
+    background: gainsboro;
+    border-top-left-radius: 11%;
+
+}
+
+/* Media screen for laptop and desktop screen */
+@media only screen and (min-width: 1025px) {
+    nav{
+        margin-left: 6rem;
+        display: block!important;
+    }
+    .logo{
+        height:50px; width:50px;
+    }
+}
+
+/* Media screen for tablet */
+@media only screen and (max-width: 1024px) {
+    .navi{
+        margin-left: 3rem;
+    }
+    .pic{
+        height: 50% !important;
+        width: 50% !important;
+    }
+
+}
+/* Media screen or mobile */
+@media only screen and (max-width: 480px) {
+    .pic{
+        height: 50% !important;
+        width: 100% !important;
+    }
+    .tog{
+        height: 25px;
+    }
+    nav{
+        margin-left: 2rem!important
+    }
+    main {
+        border-top-left-radius: 5%;
+
+    }
+a{
+    border: none;
+}
+
+
+}
